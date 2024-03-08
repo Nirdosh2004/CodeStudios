@@ -7,7 +7,7 @@ int longestSubarrayWithSumK(vector<int> a, long long k) {
     while(right < n){
         while ( left <= right && sum > k){
             sum -= a[left];
-            left++;
+            left++;   
         }
         if(sum == k){
             maxLen = max (maxLen , right - left + 1);
